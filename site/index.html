@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Panel__smartHouse</title>
+
+        <meta charset='utf-8'>
+        <meta name='viewport' content='width=720, user-scalable=no'>
+
+        <link rel='icon' href='./Main/Icon.png'>
+        <link rel='stylesheet' href='./Main/Main.css'>
+        <script type='module' src='./Main/Main.js'></script>
+    </head>
+
+    <body>
+        <div class='menu'>
+            <div class='menu__item'>
+                <img src='./Images/main.png' height='50' width='52'>
+                <span class='menu__item_header'>Мы и диоды</span>
+            </div>
+
+            <a href='tel:+79065847894'>
+                <svg xmlns="http://www.w3.org/2000/svg" width="42" height="42" viewBox="0 0 21 21" fill="none">
+                    <path d="M4.22333 9.08833C5.90333 12.39 8.61 15.0967 11.9117 16.7767L14.4783 14.21C14.805 13.8833 15.26 13.79 15.6683 13.9183C16.975 14.35 18.375 14.5833 19.8333 14.5833C20.1428 14.5833 20.4395 14.7062 20.6583 14.925C20.8771 15.1438 21 15.4406 21 15.75V19.8333C21 20.1428 20.8771 20.4395 20.6583 20.6583C20.4395 20.8771 20.1428 21 19.8333 21C14.5732 21 9.52852 18.9104 5.80905 15.191C2.08958 11.4715 0 6.42679 0 1.16667C0 0.857247 0.122916 0.560501 0.341709 0.341709C0.560501 0.122916 0.857247 0 1.16667 0H5.25C5.55942 0 5.85616 0.122916 6.07496 0.341709C6.29375 0.560501 6.41667 0.857247 6.41667 1.16667C6.41667 2.625 6.65 4.025 7.08167 5.33167C7.21 5.74 7.11667 6.195 6.79 6.52167L4.22333 9.08833Z" fill="#FA7E05"></path>
+                </svg>
+            </a>
+
+            <div class='burger' toggle>
+                <span toggle></span>
+                <span toggle></span>
+                <span toggle></span>
+            </div>
+        </div>
+
+        <div class='overlay'></div>
+
+        <div class='sub_menu'>
+            <div class='sub_menu__item' screen='main'>Главная</div>
+            <div class='sub_menu__item' screen='panel'>Панель управления</div>
+            <div class='sub_menu__item' screen='authors'>Разработчики</div>
+        </div>
+
+
+        <x-screen id='main'><div class='main'>
+            <!-- <img class='home__photo' src='./Images/home.jpg'> -->
+            <div id="scene"></div>
+            <div class='text_header'>О нас:</div>
+            <div class='text_main'><p>Добро пожаловать на главную страницу нашего сайта!</p> <p>Мы специализируемся на обеспечении вашего дома передовыми технологиями умного дома. Наша миссия - сделать вашу жизнь проще, комфортнее и безопаснее, предлагая инновационные решения для автоматизации управления различными системами вашего дома.</p>
+            <p>Системы умного дома позволят вам контролировать освещение, отопление, кондиционирование, безопасность и многое другое из любой точки мира при помощи всего лишь одного приложения на вашем смартфоне. Мы предлагаем только самые передовые и надежные устройства и технологии, гарантируя надежность и безопасность вашего дома. Наша команда экспертов готова помочь вам в подборе и установке системы умного дома, которая идеально подойдет для ваших потребностей.</p>
+            <p>Пусть ваш дом станет умным и приготовится к будущему прямо сейчас!</p> </div></div>
+        </x-screen>
+
+
+        <x-screen id='panel'>
+            <div class='panel_header'><h2>Свет</h2></div>
+            <div class='lamps'>
+                <div class='light'>
+                    <x-switch id='light_kitchen'></x-switch>
+                    <h3>Кухня</h3>
+                </div>
+
+                <div class='light'>
+                    <x-switch id='light_bathroom'></x-switch>
+                    <h3>Уборная</h3>
+                </div>
+
+                <div class='light'>
+                    <x-switch id='light_hall_2'></x-switch>
+                    <h3>Коридор 2 этажа</h3>
+                </div>
+
+                <div class='light'>
+                    <x-switch id='light_bedroom'></x-switch>
+                    <h3>Спальня</h3>
+                </div>
+
+                <div class='light'>
+                    <x-switch id='light_garage'></x-switch>
+                    <h3>Гараж</h3>
+                </div>
+
+                <div class='light'>
+                    <x-switch id='light_hall_1'></x-switch>
+                    <h3>Коридор 1 этажа</h3>
+                </div>
+
+                <div class='light'>
+                    <x-switch id='light_outside'></x-switch>
+                    <h3>Улица</h3>
+                </div>
+            </div>
+
+            <div class='warm_floor panel_header'>
+                <h2>Тёплый пол</h2>
+                <x-switch id='warm_floor'></x-switch>
+            </div>
+
+            <div class='door panel_header'>
+                <h2>Вход в гараж</h2>
+                <x-switch id='door'></x-switch>
+            </div>
+
+            <div class='panel_header'>
+                <h2>Камин</h2>
+                <x-switch id='fire'></x-switch>
+            </div>
+        </x-screen>
+
+
+        <x-screen id='authors'>
+            <div class='authors'>
+                <div class='people'>
+                    <img src='./Images/Staff/Sava.jpg' class='people__photo'>
+                    <div class='people__name'>Савелий Гилёв</div>
+                    <div class='people__data'>Руководитель и инженер</div>
+                </div>
+                <div class='people'>
+                    <img src='./Images/Staff/Vovan.png' class='people__photo'>
+                    <div class='people__name'>Владимир Воронов</div>
+                    <div class='people__data'>Технический директор</div>
+                </div>
+                <div class='people'>
+                    <img src='./Images/Staff/Kolya.jpg' class='people__photo'>
+                    <div class='people__name'>Николай Кошелев</div>
+                    <div class='people__data'>Главный программист - инженер, разработчик</div>
+                </div>
+                <div class='people'>
+                    <img src='./Images/Staff/Mishka.jpg' class='people__photo'>
+                    <div class='people__name'>Михаил Костиков</div>
+                    <div class='people__data'>Главный разработчик - программист, инженер</div>
+                </div>
+                <div class='people'>
+                    <img src='./Images/Staff/VladimirAfanasev.jpg' class='people__photo'>
+                    <div class='people__name'>Владимир Афанасьев</div>
+                    <div class='people__data'>Главный backend-разработчик</div>
+                </div>
+                <div class='people'>
+                    <img src='./Images/Staff/Denis.jpg' class='people__photo'>
+                    <div class='people__name'>Денис Бельш</div>
+                    <div class='people__data'>Программист - инженер</div>
+                </div>
+                <div class='people'>
+                    <img src='./Images/Staff/Egor.jpg' class='people__photo'>
+                    <div class='people__name'>Егор Черенков</div>
+                    <div class='people__data'>Ведущий разработчик</div>
+                </div>
+                <div class='people'>
+                    <img src='./Images/Staff/Angelika.jpg' class='people__photo'>
+                    <div class='people__name'>Анжелика Череднеченко</div>
+                    <div class='people__data'>Старший технический писатель</div>
+                </div>
+                <div class='people'>
+                    <img src='./Images/Staff/Dimon.jpg' class='people__photo'>
+                    <div class='people__name'>Дмитрий Кузнецов</div>
+                    <div class='people__data'>Программист</div>
+                </div>
+                <div class='people'>
+                    <img src='./Images/Staff/ArtemMikaelyan.jpg' class='people__photo'>
+                    <div class='people__name'>Артём Микаелян</div>
+                    <div class='people__data'>Программист</div>
+                </div>
+                <div class='people'>
+                    <img src='./Images/Staff/Maksim.jpg' class='people__photo'>
+                    <div class='people__name'>Максим Черёмухин</div>
+                    <div class='people__data'>Разработчик</div>
+                </div>
+                <div class='people'>
+                    <img src='./Images/Staff/Artem.jpg' class='people__photo'>
+                    <div class='people__name'>Артём Ващенко</div>
+                    <div class='people__data'>Outsourcing-разработчик</div>
+                </div>
+                <div class='people'>
+                    <img src='./Images/Staff/Damir.jpg' class='people__photo'>
+                    <div class='people__name'>Дамир Нехорошев</div>
+                    <div class='people__data'>Руководитель отдела прототипирования</div>
+                </div>
+                <div class='people'>
+                    <img src='./Images/Staff/SofyaShutkina.jpg' class='people__photo'>
+                    <div class='people__name'>Софья Шуткина</div>
+                    <div class='people__data'>Прототипист</div>
+                </div>
+                <div class='people'>
+                    <img src='./Images/Staff/Vsya.jpg' class='people__photo'>
+                    <div class='people__name'>Василий Фонов</div>
+                    <div class='people__data'>Прототипист</div>
+                </div>
+                <div class='people'>
+                    <img src='./Images/Staff/SashaMozh.jpg' class='people__photo'>
+                    <div class='people__name'>Александра Мажарина</div>
+                    <div class='people__data'>Прототипист</div>
+                </div>
+                <div class='people'>
+                    <img src='./Images/Staff/Andruha.jpg' class='people__photo'>
+                    <div class='people__name'>Андрей Хрипов</div>
+                    <div class='people__data'>Прототипист</div>
+                </div>
+                <div class='people'>
+                    <img src='./Images/Staff/Matvey.jpg' class='people__photo'>
+                    <div class='people__name'>Матвей Кондауров</div>
+                    <div class='people__data'>Прототипист</div>
+                </div>
+                <div class='people'>
+                    <img src='./Images/Staff/Igorek.jpg' class='people__photo'>
+                    <div class='people__name'>Игорь Яншин</div>
+                    <div class='people__data'>Прототипист</div>
+                </div>
+                <div class='people'>
+                    <img src='./Images/Staff/Lena.jpg' class='people__photo'>
+                    <div class='people__name'>Елена Смыкова</div>
+                    <div class='people__data'>Прототипист</div>
+                </div>
+            </div>
+        </x-screen>
+    </body>
+</html>

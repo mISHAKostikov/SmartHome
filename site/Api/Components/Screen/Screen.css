@@ -1,0 +1,86 @@
+:host {
+    display: none;
+}
+
+:host([_visibli]) {
+    display: block;
+}
+
+
+.people__photo {
+    height: 25vh;
+    width: 40vw;
+    border-radius: 20px;
+    background: #d7d7;
+    object-fit: cover;
+}
+
+.home__photo {
+   border-radius: 20px;
+   width: 85vw;
+   /*object-fit: cover;*/
+}
+
+
+.text_header {
+    font: 36px 'Montserrat';
+}
+
+.panel_header {
+    font: 30px 'Montserrat';
+}
+
+.text_main {
+    text-align: justify;
+    text-indent: 1.5em;
+    font: 24px 'Montserrat_medium';
+}
+
+.lamps {
+    margin-top: 2vh;
+    display: grid;
+    grid-template: 1fr 1fr 1fr / 1fr 1fr 1fr;
+    font: 20px 'Montserrat_medium';
+}
+
+x-switch {
+    --length: 100px;
+}
+
+h3 {
+    font-size: 24px;
+}
+
+
+.main {
+    overflow: hidden;
+    display: grid;
+    grid-gap: 0vh;
+    margin: 3vh;
+}
+
+
+.authors {
+    display: grid;
+    grid-template: repeat(3, 1fr) / repeat(2, 1fr);
+}
+
+
+.people {
+    padding: 20px;
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    width: 45vw;
+    grid-gap: 10px;
+}
+
+.people__name {
+    font: 800 30px 'Montserrat_medium';
+    text-align: center;
+}
+
+.people__data {
+    font: 24px 'Montserrat_medium';
+    text-align: center;
+}

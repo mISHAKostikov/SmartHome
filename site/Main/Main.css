@@ -1,0 +1,152 @@
+@font-face {
+    font-family: 'Montserrat';
+    src: url('../Fonts/Montserrat-Black.ttf');
+}
+
+
+@font-face {
+    font-family: 'Montserrat_medium';
+    src: url('../Fonts/Montserrat-Medium.ttf');
+}
+
+
+body {
+    /*background: #faa;*/
+    background: url('https://ittell.ru/wp-content/uploads/2022/03/BG-figure-1.svg');
+    margin: 0;
+    -webkit-overflow-scrolling: hidden;
+}
+
+canvas {
+    display: block;
+}
+
+#scene {
+    background-color: red;
+}
+
+#info {
+    background-color: red;
+}
+
+.menu {
+    align-items: center;
+    background: white;
+    box-shadow: 0 0 2px 3px #f0f0f0;
+    display: grid;
+    font-family: 'Montserrat';
+    grid-template-columns: 80% 10% 10%;
+    height: 70px;
+    padding: 10px;
+    position: relative;
+    z-index: 3;
+    grid-gap: 10px;
+}
+
+.menu__item {
+    align-items: center;
+    display: grid;
+    grid-auto-flow: column;
+    grid-gap: 20px;
+    justify-content: start;
+}
+
+.menu__item_header {
+    font-size: 50px;
+}
+
+#panel {
+    margin: 3vh;
+}
+
+.sub_menu {
+    align-content: start;
+    background: #fff;
+    box-sizing: border-box;
+    display: grid;
+    grid-gap: 30px;
+    height: calc(100vh - 91px);
+    justify-content: start;
+    padding: 10px;
+    position: fixed;
+    top: 90px;
+    transform: translateX(100vw);
+    transition: transform 0.3s linear;
+    width: 100vw;
+    z-index: 2;
+    font-family: 'Montserrat';
+}
+
+.sub_menu[_active] {
+    transform: translateX(30vw);
+}
+
+.overlay {
+    background: #000d;
+    height: 100vh;
+    opacity: 0;
+    position: absolute;
+    transition: opacity 0.3s linear;
+    visibility: hidden;
+    width: 100vw;
+    z-index: 1;
+}
+
+.overlay[_active] {
+    visibility: visible;
+    opacity: 1;
+}
+
+.sub_menu__item {
+    color: #000a;
+    cursor: pointer;
+    font-size: 40px;
+    user-select: none;
+}
+
+.sub_menu__item:hover {
+    color: #000;
+}
+
+
+.burger {
+    display: block;
+    height: 40px;
+    position: relative;
+    width: 50px;
+    z-index: 3;
+}
+
+.burger span {
+    background: black;
+    height: 4px;
+    left: 0;
+    position: absolute;
+    top: calc(50% - 1px);
+    transition: all 0.2s;
+    width: 100%;
+}
+
+.burger span:first-child {
+    top: 0;
+}
+
+.burger span:last-child {
+    bottom: 0;
+    top: auto;
+}
+
+.burger[_active] span {
+    background: black;
+    transform: scale(0);
+}
+
+.burger[_active] span:first-child {
+    top: calc(50% - 1px);
+    transform: rotate(-45deg);
+}
+
+.burger[_active] span:last-child {
+    bottom: calc(50% - 1px);
+    transform: rotate(45deg);
+}
